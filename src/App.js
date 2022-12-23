@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import StartingPage from './pages/StartingPage/StartingPage';
+import { StartingPage } from './pages';
 
 function App() {
   return (

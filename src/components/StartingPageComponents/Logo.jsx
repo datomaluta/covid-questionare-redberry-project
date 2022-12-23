@@ -1,10 +1,10 @@
-import logo from 'assets/images/logo.png';
+import { LogoImg } from 'assets';
 
 const Logo = () => {
   return (
     <img
       className='animate-logoAnimation block w-[6.25rem]'
-      src={logo}
+      src={LogoImg}
       alt='logo'
     />
   );
