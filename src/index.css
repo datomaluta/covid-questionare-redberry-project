@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Bgp Arial";
+  font-family: "Bgp-Arial";
   src: local("Bgp Arial"),
     url("./assets/fonts/bpg_arial_2009.ttf") format("truetype");
 }
@@ -15,7 +15,7 @@
   src: local("TBC-Contractica-Bold-caps"),
     url("./assets/fonts/TBCContracticaCAPS-Bold.ttf") format("truetype");
 }
-src/assets/fonts/
+
 body {
   height: 100vh;
   margin: 0;
@@ -25,12 +25,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-/* span{
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #232323;
-} */
 
 
 @tailwind base;
