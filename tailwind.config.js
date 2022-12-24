@@ -6,9 +6,13 @@ module.exports = {
       colors: {
         'light-grey': '#EAEAEA',
         'light-black': '#232323',
+        'very-light-gray': '#626262',
       },
       fontFamily: {
         contractica: 'TBC-Contractica-Bold-caps',
+        Anonymous: 'Anonymous Pro',
+        HelveticaNeueBold: 'HelveticaNeueLT-Bold',
+        HelveticaNeueThin: 'HelveticaNeueLT-Thin',
       },
       scale: {
         2.2: '2.2',

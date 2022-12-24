@@ -16,6 +16,21 @@
     url("./assets/fonts/TBCContracticaCAPS-Bold.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "HelveticaNeueLT-Bold";
+  src: local("HelveticaNeueLTGEO"),
+    url("./assets/fonts/Linotype-HelveticaNeueLTGEO75Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "HelveticaNeueLT-Thin";
+  src: local("HelveticaNeueLTProLt"),
+    url("./assets/fonts/HelveticaNeueLTProLt.otf") format("truetype");
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap');
+
 body {
   height: 100vh;
   margin: 0;
