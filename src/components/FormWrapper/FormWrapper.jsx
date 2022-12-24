@@ -10,7 +10,7 @@ const FormWrapper = (props) => {
         </div>
       </header>
 
-      <div className='mt-10'>{props.children}</div>
+      <div className='mt-10 flex gap-36'>{props.children}</div>
     </div>
   );
 };

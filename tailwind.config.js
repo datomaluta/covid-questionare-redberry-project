@@ -20,6 +20,7 @@ module.exports = {
       animation: {
         logoAnimation: 'makeLogoSmaller 0.5s ease-out forwards',
         textAnimation: 'appearTextWithDelay  1s forwards 1s',
+        identificationAnimation: 'transitionBlock 0.5s forwards',
       },
       keyframes: {
         makeLogoSmaller: {
@@ -29,6 +30,18 @@ module.exports = {
         appearTextWithDelay: {
           from: { opacity: 0, transform: 'translateY(-80px)' },
           to: { opacity: 1, transform: 'translateY(0)' },
+        },
+        transitionBlock: {
+          from: {
+            top: '10rem',
+            left: '40%',
+            opacity: 0,
+          },
+          to: {
+            top: '8rem',
+            left: '50%',
+            opacity: 1,
+          },
         },
       },
     },
