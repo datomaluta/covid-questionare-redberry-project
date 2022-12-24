@@ -17,12 +17,12 @@ const IdentificationPage = () => {
       <div className='relative h-[51.938rem] w-full'>
         <img
           src={IdentificationImg}
-          alt='idimg'
+          alt='identification img with two person'
           className='absolute -top-[5.5rem] left-0 z-20'
         />
         <img
           src={IdentificationBlockImg}
-          alt='idblock'
+          alt='transitional block'
           className='absolute z-10 -translate-x-1/2 animate-identificationAnimation'
         />
       </div>
