@@ -1,6 +1,11 @@
 import { Fragment } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { StartingPage, IdentificationPage, CovidQuestions } from './pages';
+import {
+  StartingPage,
+  IdentificationPage,
+  CovidQuestions,
+  Vaccination,
+} from './pages';
 
 function App() {
   return (
@@ -9,6 +14,7 @@ function App() {
         <Route path='/' element={<StartingPage />} />
         <Route path='/identification' element={<IdentificationPage />} />
         <Route path='/covid-questions' element={<CovidQuestions />} />
+        <Route path='/vaccination' element={<Vaccination />} />
       </Routes>
     </Fragment>
   );

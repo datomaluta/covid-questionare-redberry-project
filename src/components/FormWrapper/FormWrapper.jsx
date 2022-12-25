@@ -2,7 +2,7 @@ import { TextLogo } from 'components';
 
 const FormWrapper = (props) => {
   return (
-    <div className='px-[12.5rem] pt-16 bg-light-grey min-h-screen'>
+    <div className='px-[12.5rem] pt-16 bg-light-grey min-h-screen animate-formWrapperAnimation'>
       <header className='border-b-[0.113rem] border-light-black pb-4 flex justify-between items-center'>
         <TextLogo />
         <div className='font-Anonymous font-bold text-[2.5rem] leading-none'>
