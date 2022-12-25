@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { StartingPage, IdentificationPage } from './pages';
+import { StartingPage, IdentificationPage, CovidQuestions } from './pages';
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <Routes>
         <Route path='/' element={<StartingPage />} />
         <Route path='/identification' element={<IdentificationPage />} />
+        <Route path='/covid-questions' element={<CovidQuestions />} />
       </Routes>
     </Fragment>
   );

@@ -45,3 +45,8 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input:checked + label span {  
+  @apply bg-light-black;  
+}
+
