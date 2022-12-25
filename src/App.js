@@ -5,7 +5,7 @@ import {
   IdentificationPage,
   CovidQuestions,
   Vaccination,
-} from './pages';
+} from 'pages';
 
 function App() {
   return (
