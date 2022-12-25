@@ -20,7 +20,7 @@ const IdentificationPage = () => {
         <img
           src={IdentificationImg}
           alt='identification img with two person'
-          className='absolute -top-[2.5rem] left-0 z-20'
+          className='absolute -top-10 left-0 z-20'
         />
         <img
           src={IdentificationBlockImg}
