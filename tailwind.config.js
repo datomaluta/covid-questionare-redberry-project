@@ -21,6 +21,7 @@ module.exports = {
         logoAnimation: 'makeLogoSmaller 0.5s ease-out forwards',
         textAnimation: 'appearTextWithDelay  1s forwards 1s',
         identificationAnimation: 'transitionBlock 0.5s forwards',
+        covidQuestionsAnimation: 'transitionCircle 0.5s forwards',
       },
       keyframes: {
         makeLogoSmaller: {
@@ -33,13 +34,25 @@ module.exports = {
         },
         transitionBlock: {
           from: {
-            top: '10rem',
+            top: '13rem',
             left: '40%',
             opacity: 0,
           },
           to: {
-            top: '8rem',
+            top: '11rem',
             left: '50%',
+            opacity: 1,
+          },
+        },
+        transitionCircle: {
+          from: {
+            top: '11rem',
+            left: '40%',
+            opacity: 0,
+          },
+          to: {
+            top: '14.5rem',
+            left: '7.5rem',
             opacity: 1,
           },
         },

@@ -45,3 +45,17 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input:checked + label{  
+  /* @apply bg-black;   */
+  /* @apply border-none;  */
+}  
+input:checked + label span {  
+  @apply bg-light-black;  
+}
+
+/* input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+} */
