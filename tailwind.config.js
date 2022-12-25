@@ -7,6 +7,7 @@ module.exports = {
         'light-grey': '#EAEAEA',
         'light-black': '#232323',
         'very-light-gray': '#626262',
+        'link-color': '#1289AE',
       },
       fontFamily: {
         contractica: 'TBC-Contractica-Bold-caps',
@@ -22,6 +23,8 @@ module.exports = {
         textAnimation: 'appearTextWithDelay  1s forwards 1s',
         identificationAnimation: 'transitionBlock 0.5s forwards',
         covidQuestionsAnimation: 'transitionCircle 0.5s forwards',
+        doctorStarAnimation: 'transitionStar 0.5s forwards',
+        formWrapperAnimation: 'opacityTransition 0.5s forwards',
       },
       keyframes: {
         makeLogoSmaller: {
@@ -53,6 +56,26 @@ module.exports = {
           to: {
             top: '14.5rem',
             left: '7.5rem',
+            opacity: 1,
+          },
+        },
+        transitionStar: {
+          from: {
+            top: '12.5rem',
+            left: '3.5rem',
+            opacity: 0,
+          },
+          to: {
+            top: '-1rem',
+            left: '2rem',
+            opacity: 1,
+          },
+        },
+        opacityTransition: {
+          from: {
+            opacity: 0,
+          },
+          to: {
             opacity: 1,
           },
         },
