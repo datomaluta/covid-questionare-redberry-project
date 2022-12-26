@@ -8,6 +8,7 @@ module.exports = {
         'light-black': '#232323',
         'very-light-gray': '#626262',
         'link-color': '#1289AE',
+        'light-blue': '#208298',
       },
       fontFamily: {
         contractica: 'TBC-Contractica-Bold-caps',
@@ -25,6 +26,7 @@ module.exports = {
         covidQuestionsAnimation: 'transitionCircle 0.5s forwards',
         doctorStarAnimation: 'transitionStar 0.5s forwards',
         formWrapperAnimation: 'opacityTransition 0.5s forwards',
+        heartAnimation: 'transitionHear 0.5s forwards',
       },
       keyframes: {
         makeLogoSmaller: {
@@ -79,8 +81,15 @@ module.exports = {
             opacity: 1,
           },
         },
+        transitionHear: {
+          from: { opacity: 0, top: '-2rem', left: '-1rem' },
+          to: { opacity: 1, top: '4rem', left: '6rem' },
+        },
       },
     },
   },
-  plugins: [require('tailwindcss-text-fill-stroke')()],
+  plugins: [
+    require('tailwindcss-text-fill-stroke')(),
+    require('tailwind-scrollbar')({ nocompatible: true }),
+  ],
 };
