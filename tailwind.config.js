@@ -27,6 +27,8 @@ module.exports = {
         doctorStarAnimation: 'transitionStar 0.5s forwards',
         formWrapperAnimation: 'opacityTransition 0.5s forwards',
         heartAnimation: 'transitionHear 0.5s forwards',
+        bigStarAnimation: 'movableBigStar 0.5s forwards',
+        littleStarAnimation: 'movableLittleStar 0.5s forwards',
       },
       keyframes: {
         makeLogoSmaller: {
@@ -84,6 +86,14 @@ module.exports = {
         transitionHear: {
           from: { opacity: 0, top: '-2rem', left: '-1rem' },
           to: { opacity: 1, top: '4rem', left: '6rem' },
+        },
+        movableBigStar: {
+          from: { opacity: 0, top: '-2rem', left: '3rem' },
+          to: { opacity: 1, top: '-4rem', left: '1.5rem' },
+        },
+        movableLittleStar: {
+          from: { opacity: 0, bottom: '0', right: '4.5rem' },
+          to: { opacity: 1, bottom: '-1.5rem', right: '3rem' },
         },
       },
     },

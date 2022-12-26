@@ -7,3 +7,5 @@ export { default as DoctorImg } from './doctor.png';
 export { default as DoctorStarImg } from './doctor-star.png';
 export { default as BikeImg } from './bike.png';
 export { default as HeartImg } from './heart.png';
+export { default as BigStar } from './thanks-big-star.png';
+export { default as LittleStar } from './thanks-little-star.png';
