@@ -1,27 +1,27 @@
 import React, { useMemo, useReducer } from 'react';
 
 const FormContext = React.createContext({
-  firstName: '',
-  lastName: '',
+  first_name: '',
+  last_name: '',
   email: '',
   dispatch: (data) => {},
 });
 
 const initialForm = {
-  firstName: '',
-  lastName: '',
+  first_name: '',
+  last_name: '',
   email: '',
 };
 
 const formReducer = (state, action) => {
-  if (action.type === 'firstName') {
+  if (action.type === 'first_name') {
     console.log('asd');
-    localStorage.setItem('firstName', action.value);
-    return { ...state, firstName: action.value };
+    localStorage.setItem('first_name', action.value);
+    return { ...state, first_name: action.value };
   }
-  if (action.type === 'lastName') {
-    localStorage.setItem('lastName', action.value);
-    return { ...state, lastName: action.value };
+  if (action.type === 'last_name') {
+    localStorage.setItem('last_name', action.value);
+    return { ...state, last_name: action.value };
   }
   if (action.type === 'email') {
     localStorage.setItem('email', action.value);

@@ -7,11 +7,9 @@ import {
   TipsPage,
   ThanksPage,
 } from 'pages';
-import { FormDataProvider } from 'context/form-data';
+import { FormDataProvider } from 'context/FormData';
 
 function App() {
-  // const formCtx = useContext(FormContext);
-  // console.log(formCtx);
   return (
     <FormDataProvider>
       <Routes>

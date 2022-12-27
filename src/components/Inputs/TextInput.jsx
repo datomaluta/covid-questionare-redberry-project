@@ -1,21 +1,16 @@
 import { useFormContext, useWatch } from 'react-hook-form';
 import { ErrorMessage } from '@hookform/error-message';
 import { useContext, useEffect } from 'react';
-import FormContext from 'context/form-data';
+import FormContext from 'context/FormData';
 
 const TextInput = (props) => {
   const formCtx = useContext(FormContext);
-  console.log(formCtx.formValues);
   const form = useFormContext();
-
-  console.log('rerendered');
 
   const inputData = useWatch({
     name: props.name,
     control: form.control,
   });
-
-  console.log(inputData);
 
   useEffect(() => {
     if (inputData) {

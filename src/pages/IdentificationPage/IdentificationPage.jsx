@@ -7,8 +7,8 @@ const IdentificationPage = () => {
   const navigate = useNavigate();
   const form = useForm({
     defaultValues: {
-      firstName: localStorage.getItem('firstName'),
-      lastName: localStorage.getItem('lastName'),
+      first_name: localStorage.getItem('first_name'),
+      last_name: localStorage.getItem('last_name'),
       email: localStorage.getItem('email'),
     },
   });
@@ -24,7 +24,7 @@ const IdentificationPage = () => {
           <TextInput
             label='სახელი*'
             placeholder='იოსებ'
-            name={'firstName'}
+            name={'first_name'}
             rules={{
               required: 'სახელის ველი უნდა შედგებოდეს მინიმუმ 3 სიმბოლოსგან',
               minLength: {
@@ -45,7 +45,7 @@ const IdentificationPage = () => {
           <TextInput
             label='გვარი*'
             placeholder='ჯუღაშვილი'
-            name={'lastName'}
+            name={'last_name'}
             rules={{
               required: 'გვარის ველი უნდა შედგებოდეს მინიმუმ 3 სიმბოლოსგან',
               minLength: {
@@ -69,9 +69,7 @@ const IdentificationPage = () => {
             rules={{
               required: 'მეილის ველი აუცილებელია',
               pattern: {
-                value:
-                  // eslint-disable-next-line
-                  /([a-zA-Z0-9]+)([\.{1}])?([a-zA-Z0-9]+)\@redberry([\.])ge/g,
+                value: /([a-zA-Z0-9]+)([.{1}])?([a-zA-Z0-9]+)@redberry([.])ge$/,
                 message:
                   'გთხოვთ დარეგისტრირდეთ Redberry-ს მეილით (youremail@redberry.ge)',
               },
