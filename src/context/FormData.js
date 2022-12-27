@@ -15,7 +15,6 @@ const initialForm = {
 
 const formReducer = (state, action) => {
   if (action.type === 'first_name') {
-    console.log('asd');
     localStorage.setItem('first_name', action.value);
     return { ...state, first_name: action.value };
   }

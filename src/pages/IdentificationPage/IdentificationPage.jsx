@@ -13,7 +13,6 @@ const IdentificationPage = () => {
     },
   });
   const onSubmit = (data) => {
-    console.log(data);
     navigate('/covid-questions');
   };
 
