@@ -1,6 +1,5 @@
 import { BikeImg, HeartImg } from 'assets';
 import { FormWrapper, PrevArrow, RadioInput } from 'components';
-import { Fragment } from 'react';
 
 const TipsPage = () => {
   return (

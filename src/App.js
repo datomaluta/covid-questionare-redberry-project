@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import {
   StartingPage,
@@ -8,10 +7,11 @@ import {
   TipsPage,
   ThanksPage,
 } from 'pages';
+import { FormDataProvider } from 'context/FormData';
 
 function App() {
   return (
-    <Fragment>
+    <FormDataProvider>
       <Routes>
         <Route path='/' element={<StartingPage />} />
         <Route path='/identification' element={<IdentificationPage />} />
@@ -20,7 +20,7 @@ function App() {
         <Route path='/tips' element={<TipsPage />} />
         <Route path='/thanks' element={<ThanksPage />} />
       </Routes>
-    </Fragment>
+    </FormDataProvider>
   );
 }
 
