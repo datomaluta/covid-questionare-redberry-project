@@ -9,6 +9,7 @@ module.exports = {
         'very-light-gray': '#626262',
         'link-color': '#1289AE',
         'light-blue': '#208298',
+        'error-color': '#F15524',
       },
       fontFamily: {
         contractica: 'TBC-Contractica-Bold-caps',
