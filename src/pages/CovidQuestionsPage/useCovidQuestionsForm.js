@@ -1,8 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import { useContext } from 'react';
+import { FormContext } from 'context';
 
 export const useCovidQuestionsForm = () => {
   const navigate = useNavigate();
+  const formCtx = useContext(FormContext);
   const form = useForm({
     mode: 'onChange',
     defaultValues: {
@@ -17,5 +20,5 @@ export const useCovidQuestionsForm = () => {
     navigate('/vaccination');
   };
 
-  return { form, onSubmit };
+  return { form, onSubmit, formCtx };
 };

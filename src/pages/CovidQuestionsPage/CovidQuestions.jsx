@@ -10,13 +10,10 @@ import {
 } from 'components';
 import { Link } from 'react-router-dom';
 import { FormProvider } from 'react-hook-form';
-import { useContext } from 'react';
-import { FormContext } from 'context';
 import { useCovidQuestionsForm } from './useCovidQuestionsForm';
 
 const CovidQuestions = () => {
-  const { form, onSubmit } = useCovidQuestionsForm();
-  const formCtx = useContext(FormContext);
+  const { form, onSubmit, formCtx } = useCovidQuestionsForm();
 
   return (
     <FormProvider {...form}>
