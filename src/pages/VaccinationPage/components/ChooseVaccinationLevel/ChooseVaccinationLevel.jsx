@@ -7,21 +7,22 @@ const ChooseVaccinationLevel = () => {
         აირჩიე რა ეტაპზე ხარ*
       </p>
       <RadioInput
-        id='vaccinated_first_registered_second'
-        value='vaccinated_first_registered_second'
-        name='vaccination_level'
+        id='first_dosage_and_registered_on_the_second'
+        value='first_dosage_and_registered_on_the_second'
+        name='vaccination_stage'
         answer='პირველი დოზა და დარეგისტრირებული ვარ მეორეზე'
+        rules={{ required: 'ამ ველის შევსება აუცილებელია' }}
       />
       <RadioInput
-        id='vaccinated_fully'
-        value='vaccinated_fully'
-        name='vaccination_level'
+        id='fully_vaccinated'
+        value='fully_vaccinated'
+        name='vaccination_stage'
         answer='სრულად აცრილი ვარ'
       />
       <RadioInput
-        id='vaccinated_first_not_registered_second'
-        value='vaccinated_first_not_registered_second'
-        name='vaccination_level'
+        id='first_dosage_and_not_registered_yet'
+        value='first_dosage_and_not_registered_yet'
+        name='vaccination_stage'
         answer='პირველი დოზა და არ დავრეგისტრირებულვარ მეორეზე'
       />
     </div>

@@ -9,6 +9,8 @@ const FormContext = React.createContext({
   antibodies_test: '',
   antibodies_test_date: '',
   antibodies_number: '',
+  had_vaccine: '',
+  vaccination_stage: '',
   dispatch: (data) => {},
 });
 
@@ -21,6 +23,8 @@ const initialForm = {
   antibodies_test: '',
   antibodies_test_date: '',
   antibodies_number: '',
+  had_vaccine: '',
+  vaccination_stage: '',
 };
 
 const formReducer = (state, action) => {
@@ -55,6 +59,18 @@ const formReducer = (state, action) => {
   if (action.type === 'covid_sickness_date') {
     localStorage.setItem('covid_sickness_date', action.value);
     return { ...state, covid_sickness_date: action.value };
+  }
+  if (action.type === 'had_vaccine') {
+    localStorage.setItem('had_vaccine', action.value);
+    return { ...state, had_vaccine: action.value };
+  }
+  if (action.type === 'vaccination_stage') {
+    localStorage.setItem('vaccination_stage', action.value);
+    return { ...state, vaccination_stage: action.value };
+  }
+  if (action.type === 'i_am_waiting') {
+    localStorage.setItem('i_am_waiting', action.value);
+    return { ...state, i_am_waiting: action.value };
   }
   return { ...state };
 };
