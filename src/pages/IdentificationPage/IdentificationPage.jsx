@@ -1,20 +1,10 @@
 import { FormWrapper, NextArrow, TextInput } from 'components';
 import { IdentificationImg, IdentificationBlockImg } from 'assets';
-import { useNavigate } from 'react-router-dom';
-import { useForm, FormProvider } from 'react-hook-form';
+import { FormProvider } from 'react-hook-form';
+import { useIdentificationForm } from './useIdentificationForm';
 
 const IdentificationPage = () => {
-  const navigate = useNavigate();
-  const form = useForm({
-    defaultValues: {
-      first_name: localStorage.getItem('first_name'),
-      last_name: localStorage.getItem('last_name'),
-      email: localStorage.getItem('email'),
-    },
-  });
-  const onSubmit = (data) => {
-    navigate('/covid-questions');
-  };
+  const { form, onSubmit } = useIdentificationForm();
 
   return (
     <FormProvider {...form}>
@@ -78,7 +68,10 @@ const IdentificationPage = () => {
             <span className='h-[0.05rem] mb-5 w-60 bg-black block'></span>
             *-ით მონიშნული ველების შევსება <br /> სავალდებულოა
           </p>
-          <button className='absolute bottom-28 left-[55%] -translate-x-1/2'>
+          <button
+            disabled={!form.formState.isValid}
+            className='absolute z-40 bottom-8 left-[53%] -translate-x-1/2'
+          >
             <NextArrow />
           </button>
         </form>

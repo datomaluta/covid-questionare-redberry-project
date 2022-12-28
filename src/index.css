@@ -50,3 +50,7 @@ input:checked + label span {
   @apply bg-light-black;  
 }
 
+button:disabled svg path{
+  stroke: #8D8D8D;
+}
+

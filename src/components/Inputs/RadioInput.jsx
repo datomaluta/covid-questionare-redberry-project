@@ -1,7 +1,12 @@
+import { useInput } from './useInput';
+
 const RadioInput = (props) => {
+  const { form } = useInput(props);
+
   return (
     <div className='flex items-center gap-5 mt-4 ml-4'>
       <input
+        {...form.register(props.name, props.rules)}
         name={props.name}
         className='hidden'
         type='radio'
