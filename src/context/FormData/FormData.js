@@ -11,6 +11,10 @@ const FormContext = React.createContext({
   antibodies_number: '',
   had_vaccine: '',
   vaccination_stage: '',
+  non_formal_meetings: '',
+  number_of_days_from_office: '',
+  what_about_meetings_in_live: '',
+  tell_us_your_opinion_about_us: '',
   dispatch: (data) => {},
 });
 
@@ -25,6 +29,10 @@ const initialForm = {
   antibodies_number: '',
   had_vaccine: '',
   vaccination_stage: '',
+  non_formal_meetings: '',
+  number_of_days_from_office: '',
+  what_about_meetings_in_live: '',
+  tell_us_your_opinion_about_us: '',
 };
 
 const formReducer = (state, action) => {
@@ -71,6 +79,22 @@ const formReducer = (state, action) => {
   if (action.type === 'i_am_waiting') {
     localStorage.setItem('i_am_waiting', action.value);
     return { ...state, i_am_waiting: action.value };
+  }
+  if (action.type === 'non_formal_meetings') {
+    localStorage.setItem('non_formal_meetings', action.value);
+    return { ...state, non_formal_meetings: action.value };
+  }
+  if (action.type === 'number_of_days_from_office') {
+    localStorage.setItem('number_of_days_from_office', action.value);
+    return { ...state, number_of_days_from_office: action.value };
+  }
+  if (action.type === 'what_about_meetings_in_live') {
+    localStorage.setItem('what_about_meetings_in_live', action.value);
+    return { ...state, what_about_meetings_in_live: action.value };
+  }
+  if (action.type === 'tell_us_your_opinion_about_us') {
+    localStorage.setItem('tell_us_your_opinion_about_us', action.value);
+    return { ...state, tell_us_your_opinion_about_us: action.value };
   }
   return { ...state };
 };
