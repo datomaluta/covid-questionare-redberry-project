@@ -1,24 +1,8 @@
-import { useFormContext, useWatch } from 'react-hook-form';
 import { ErrorMessage } from '@hookform/error-message';
-import { useContext, useEffect } from 'react';
-import FormContext from 'context/FormData';
+import { useInput } from './useInput';
 
 const TextInput = (props) => {
-  const formCtx = useContext(FormContext);
-  const form = useFormContext();
-
-  const inputData = useWatch({
-    name: props.name,
-    control: form.control,
-  });
-
-  useEffect(() => {
-    if (inputData) {
-      formCtx.dispatch({ type: props.name, value: inputData });
-    } else {
-      formCtx.dispatch({ type: props.name, value: '' });
-    }
-  }, [inputData, props.name]);
+  const { form } = useInput(props);
 
   return (
     <div className='mb-12'>

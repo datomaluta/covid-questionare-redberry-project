@@ -1,21 +1,10 @@
 import { FormWrapper, NextArrow, TextInput } from 'components';
 import { IdentificationImg, IdentificationBlockImg } from 'assets';
-import { useNavigate } from 'react-router-dom';
-import { useForm, FormProvider } from 'react-hook-form';
+import { FormProvider } from 'react-hook-form';
+import { useIdentificationForm } from './useIdentificationForm';
 
 const IdentificationPage = () => {
-  const navigate = useNavigate();
-  const form = useForm({
-    mode: 'onChange',
-    defaultValues: {
-      first_name: localStorage.getItem('first_name'),
-      last_name: localStorage.getItem('last_name'),
-      email: localStorage.getItem('email'),
-    },
-  });
-  const onSubmit = (data) => {
-    navigate('/covid-questions');
-  };
+  const { form, onSubmit } = useIdentificationForm();
 
   return (
     <FormProvider {...form}>

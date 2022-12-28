@@ -1,6 +1,5 @@
 import { CovidQuestionsCircleImg, CovidQuestionsImg } from 'assets';
 import { ErrorMessage } from '@hookform/error-message';
-
 import {
   DateInput,
   FormWrapper,
@@ -9,27 +8,15 @@ import {
   RadioInput,
   TextInput,
 } from 'components';
-import { Link, useNavigate } from 'react-router-dom';
-import { useForm, FormProvider } from 'react-hook-form';
+import { Link } from 'react-router-dom';
+import { FormProvider } from 'react-hook-form';
 import { useContext } from 'react';
-import FormContext from 'context/FormData';
-const CovidQuestions = () => {
-  const navigate = useNavigate();
-  const formCtx = useContext(FormContext);
+import { FormContext } from 'context';
+import { useCovidQuestionsForm } from './useCovidQuestionsForm';
 
-  const form = useForm({
-    mode: 'onChange',
-    defaultValues: {
-      had_covid: localStorage.getItem('had_covid') || '',
-      antibodies_test: localStorage.getItem('antibodies_test') || '',
-      antibodies_test_date: localStorage.getItem('antibodies_test_date') || '',
-      antibodies_number: localStorage.getItem('antibodies_number') || '',
-      covid_sickness_date: localStorage.getItem('covid_sickness_date') || '',
-    },
-  });
-  const onSubmit = (data) => {
-    navigate('/vaccination');
-  };
+const CovidQuestions = () => {
+  const { form, onSubmit } = useCovidQuestionsForm();
+  const formCtx = useContext(FormContext);
 
   return (
     <FormProvider {...form}>
@@ -115,23 +102,24 @@ const CovidQuestions = () => {
                 </div>
               </div>
             )}
-          {formCtx.formValues.antibodies_test === 'no' && (
-            <div className='mt-12'>
-              <p className='font-HelveticaNeueBold text-[1.375rem]'>
-                მიუთითე მიახლოებითი პერიოდი (დღე/თვე/წელი) როდის გქონდა
-                Covid-19*
-              </p>
-              <div className='ml-4'>
-                <DateInput
-                  name='covid_sickness_date'
-                  placeholder='დდ/თთ/წწ'
-                  rules={{
-                    required: 'ეს ველი აუცილებელია',
-                  }}
-                />
+          {formCtx.formValues.antibodies_test === 'no' &&
+            formCtx.formValues.had_covid === 'yes' && (
+              <div className='mt-12'>
+                <p className='font-HelveticaNeueBold text-[1.375rem]'>
+                  მიუთითე მიახლოებითი პერიოდი (დღე/თვე/წელი) როდის გქონდა
+                  Covid-19*
+                </p>
+                <div className='ml-4'>
+                  <DateInput
+                    name='covid_sickness_date'
+                    placeholder='დდ/თთ/წწ'
+                    rules={{
+                      required: 'ეს ველი აუცილებელია',
+                    }}
+                  />
+                </div>
               </div>
-            </div>
-          )}
+            )}
           <button
             disabled={!form.formState.isValid}
             className='absolute bottom-8 left-[53%] z-40 -translate-x-1/2'

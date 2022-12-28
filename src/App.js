@@ -7,7 +7,7 @@ import {
   TipsPage,
   ThanksPage,
 } from 'pages';
-import { FormDataProvider } from 'context/FormData';
+import { FormDataProvider } from 'context';
 
 function App() {
   return (
