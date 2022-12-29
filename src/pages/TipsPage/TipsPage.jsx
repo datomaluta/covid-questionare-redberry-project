@@ -6,10 +6,42 @@ import { ErrorMessage } from '@hookform/error-message';
 import { Link } from 'react-router-dom';
 
 const TipsPage = () => {
-  const { form, onSubmit } = useTips();
+  const { form, onSubmit, error } = useTips();
+
+  const sendData = async () => {
+    const response = await fetch('https://covid19.devtest.ge/api/create', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        first_name: 'gela',
+        last_name: 'babluani',
+        email: 'gela@redberry.ge',
+        had_covid: 'yes',
+        had_antibody_test: true,
+        antibodies: {
+          test_date: '2022-04-30',
+          number: 570,
+        },
+        had_vaccine: true,
+        vaccination_stage: 'first_dosage_and_registered_on_the_second',
+        non_formal_meetings: 'once_a_week',
+        number_of_days_from_office: 3,
+        what_about_meetings_in_live: 'I will enjoy very much',
+        tell_us_your_opinion_about_us:
+          "It'''s great to be here! Just... why do guys have Postman logo? 🤔",
+      }),
+    });
+    const data = await response;
+    console.log(data);
+  };
+
   return (
     <FormProvider {...form}>
       <FormWrapper page='4'>
+        <button onClick={sendData}>click me</button>
         <div className='w-[38.875rem] max-h-[50rem] mt-10 mr-36 overflow-y-scroll overflow-x-hidden scrollbar-none pb-16'>
           <div className='font-HelveticaNeueThin text-[1.375rem]'>
             <p className='mb-4'>
@@ -124,7 +156,8 @@ const TipsPage = () => {
               </p>
               <TextArea name='tell_us_your_opinion_about_us' />
             </div>
-            <div className='flex justify-end mt-14'>
+            <div className='flex items-center justify-end mt-14'>
+              {error && <p className='text-red-500'>დაფიქსირდა შეცდომა</p>}
               <button className='font-contractica px-7 py-4 bg-light-blue text-white rounded-[2.625rem]'>
                 დასრულება
               </button>

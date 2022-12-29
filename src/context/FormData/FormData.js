@@ -11,6 +11,7 @@ const FormContext = React.createContext({
   antibodies_number: '',
   had_vaccine: '',
   vaccination_stage: '',
+  i_am_waiting: '',
   non_formal_meetings: '',
   number_of_days_from_office: '',
   what_about_meetings_in_live: '',
@@ -19,20 +20,24 @@ const FormContext = React.createContext({
 });
 
 const initialForm = {
-  first_name: '',
-  last_name: '',
-  email: '',
-  had_covid: '',
-  covid_sickness_date: '',
-  antibodies_test: '',
-  antibodies_test_date: '',
-  antibodies_number: '',
-  had_vaccine: '',
-  vaccination_stage: '',
-  non_formal_meetings: '',
-  number_of_days_from_office: '',
-  what_about_meetings_in_live: '',
-  tell_us_your_opinion_about_us: '',
+  first_name: localStorage.getItem('first_name') || '',
+  last_name: localStorage.getItem('last_name') || '',
+  email: localStorage.getItem('email') || '',
+  had_covid: localStorage.getItem('had_covid') || '',
+  covid_sickness_date: localStorage.getItem('covid_sickness_date') || '',
+  antibodies_test: localStorage.getItem('antibodies_test') || '',
+  antibodies_test_date: localStorage.getItem('antibodies_test_date') || '',
+  antibodies_number: localStorage.getItem('antibodies_number') || '',
+  had_vaccine: localStorage.getItem('had_vaccine') || '',
+  vaccination_stage: localStorage.getItem('vaccination_stage') || '',
+  i_am_waiting: localStorage.getItem('i_am_waiting') || '',
+  non_formal_meetings: localStorage.getItem('non_formal_meetings') || '',
+  number_of_days_from_office:
+    localStorage.getItem('number_of_days_from_office') || '',
+  what_about_meetings_in_live:
+    localStorage.getItem('what_about_meetings_in_live') || '',
+  tell_us_your_opinion_about_us:
+    localStorage.getItem('tell_us_your_opinion_about_us') || '',
 };
 
 const formReducer = (state, action) => {
@@ -50,7 +55,10 @@ const formReducer = (state, action) => {
     return { ...state, had_covid: action.value };
   }
   if (action.type === 'antibodies_test') {
-    return { ...state, antibodies_test: action.value };
+    return {
+      ...state,
+      antibodies_test: action.value,
+    };
   }
   if (action.type === 'antibodies_test_date') {
     return { ...state, antibodies_test_date: action.value };
@@ -82,7 +90,7 @@ const formReducer = (state, action) => {
   if (action.type === 'tell_us_your_opinion_about_us') {
     return { ...state, tell_us_your_opinion_about_us: action.value };
   }
-  return { ...state };
+  return state;
 };
 
 export const FormDataProvider = (props) => {
