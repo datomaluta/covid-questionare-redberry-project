@@ -7,19 +7,20 @@ const WaitingFor = () => {
       <RadioInput
         id='registered_and_waiting'
         value='registered_and_waiting'
-        name='what_are_you_waiting_for'
+        name='i_am_waiting'
         answer='დარეგისტრირებული ვარ და ველოდები რიცხვს'
+        rules={{ required: 'ეს ველი აუცილებელია' }}
       />
       <RadioInput
-        id='not_going'
-        value='not_going'
-        name='what_are_you_waiting_for'
+        id='not_planning'
+        value='not_planning'
+        name='i_am_waiting'
         answer='არ ვგეგმავ'
       />
       <RadioInput
-        id='have_covid_and_going_to_vaccinate'
-        value='have_covid_and_going_to_vaccinate'
-        name='what_are_you_waiting_for'
+        id=' had_covid_and_planning_to_be_vaccinated'
+        value='had_covid_and_planning_to_be_vaccinated'
+        name='i_am_waiting'
         answer='კოვიდი მაქვს და ვგეგმავ აცრას'
       />
     </div>
