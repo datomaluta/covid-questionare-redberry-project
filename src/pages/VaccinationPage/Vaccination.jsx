@@ -18,7 +18,10 @@ const Vaccination = () => {
   return (
     <FormProvider {...form}>
       <FormWrapper page='3'>
-        <form onSubmit={form.handleSubmit(onSubmit)} className='mt-10'>
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className='mt-10 w-vaccination-form-width'
+        >
           <div>
             <p className='font-HelveticaNeueBold text-[1.375rem]'>
               უკვე აცრილი ხარ?*

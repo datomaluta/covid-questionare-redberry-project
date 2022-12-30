@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+<div style="display:flex; align-items: center">
+  <h1 style="position:relative; top: -6px" >Covid Questionare</h1>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+The Covid Questionnaire is an application that new employees of RedBerry have to fill out to find out how they feel about the Covid situation and how RedBerry can improve and support the company's internal Covid policy.
 
-In the project directory, you can run:
+#
 
-### `npm start`
+### Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Prerequisites](#prerequisites)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Resources Tab](#resources-tab)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- _Node JS @12.X and up_
+- _Yarn @1.X and up_
+- _npm @6 and up_
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#
 
-### `npm run build`
+### Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [React @18](https://reactjs.org) - front-end framework
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Getting Started
 
-### `npm run eject`
+1\. First of all you need to clone E Space repository from github:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```sh
+git clone https://github.com/RedberryInternship/datomaluta-covid-questionare.git
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2\. Next step requires install all the dependencies.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```sh
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+or
 
-## Learn More
+```sh
+yarn
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4\. after that you can run application from terminal:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+npm start
+```
 
-### Code Splitting
+#
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Project Structure
 
-### Analyzing the Bundle Size
+```bash
+├─── src
+│   ├───  App.js
+│   ├───  assets
+│   ├───  components
+│   ├───├───  component-folder
+│   ├───├───├─── component-name.jsx
+│   ├───├───├─── index.js
+│   ├───├─── index.js
+│   ├─── context
+│   ├───├─── context-folder
+│   ├───├───├─── context-file
+│   ├─── helpers
+│   ├─── pages
+│   ├───├─── page-folder
+│   ├───├───├─── page-name.jsx
+│   ├───├───├─── index.js
+│   ├───├───├─── use-page-name.js
+- tailwind.config.js
+- .eslintrc.json
+- .gitignore
+- .prettierrc.json
+- .vscode
+- ├─── settings.json
+- jsconfig.json
+- package-lock.json
+- package.json
+- postcss.config.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#
 
-### Making a Progressive Web App
+### Resources Tab
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Assignment link](https://redberry.gitbook.io/assignment-i-covid-questionaire/)
+- [Figma link](https://www.figma.com/file/56t2BI25FcD0LAIjR4GVkQ/%E1%83%99%E1%83%98%E1%83%97%E1%83%AE%E1%83%95%E1%83%90%E1%83%A0%E1%83%98?node-id=37%3A3) - Application Design
+```
