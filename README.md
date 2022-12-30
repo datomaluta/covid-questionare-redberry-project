@@ -60,33 +60,34 @@ npm start
 
 ### Project Structure
 
-src
-|-- App.js
-|-- assets
-|-- components
-| |-- component-folder
-| | |-- component-name.jsx
-| | |-- index.js
-| |-- index.js
-|-- context
-| |-- context-folder
-|-- helpers
-|-- pages
-| |-- page-folder
-| | |-- page-name.jsx
-| | |-- index.js
-| | |-- use-page-name.js
-| |-- index.js
-tailwind.config.js
-.eslintrc.json
-.gitignore
-.prettierrc.json
-.vscode
-|-- settings.json
-jsconfig.json
-package-lock.json
-package.json
-postcss.config.js
+```bash
+├─── src
+│   ├───  App.js
+│   ├───  assets
+│   ├───  components
+│   ├───├───  component-folder
+│   ├───├───├─── component-name.jsx
+│   ├───├───├─── index.js
+│   ├───├─── index.js
+│   ├─── context
+│   ├───├─── context-folder
+│   ├───├───├─── context-file
+│   ├─── helpers
+│   ├─── pages
+│   ├───├─── page-folder
+│   ├───├───├─── page-name.jsx
+│   ├───├───├─── index.js
+│   ├───├───├─── use-page-name.js
+- tailwind.config.js
+- .eslintrc.json
+- .gitignore
+- .prettierrc.json
+- .vscode
+- ├─── settings.json
+- jsconfig.json
+- package-lock.json
+- package.json
+- postcss.config.js
 
 #
 
@@ -94,3 +95,4 @@ postcss.config.js
 
 - [Assignment link](https://redberry.gitbook.io/assignment-i-covid-questionaire/)
 - [Figma link](https://www.figma.com/file/56t2BI25FcD0LAIjR4GVkQ/%E1%83%99%E1%83%98%E1%83%97%E1%83%AE%E1%83%95%E1%83%90%E1%83%A0%E1%83%98?node-id=37%3A3) - Application Design
+```
