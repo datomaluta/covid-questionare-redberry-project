@@ -23,6 +23,48 @@ export const useTips = () => {
     },
   });
 
+  const {
+    first_name,
+    last_name,
+    email,
+    had_covid,
+    antibodies_test,
+    covid_sickness_date,
+    antibodies_test_date,
+    antibodies_number,
+    had_vaccine,
+    vaccination_stage,
+    i_am_waiting,
+    non_formal_meetings,
+    number_of_days_from_office,
+    what_about_meetings_in_live,
+    tell_us_your_opinion_about_us,
+  } = formCtx.formValues;
+
+  const toSendData = {
+    first_name,
+    last_name,
+    email,
+    had_covid,
+    ...(antibodies_test === 'no' && { covid_sickness_date }),
+    ...(had_covid === 'yes' && {
+      had_antibody_test: antibodies_test === 'yes' ? true : false,
+    }),
+    ...(antibodies_test === 'yes' && {
+      antibodies: {
+        test_date: antibodies_test_date,
+        number: +antibodies_number,
+      },
+    }),
+    had_vaccine: had_vaccine === 'yes' ? true : false,
+    ...(had_vaccine === 'yes' && { vaccination_stage }),
+    ...(had_vaccine === 'no' && { i_am_waiting }),
+    non_formal_meetings,
+    number_of_days_from_office: +number_of_days_from_office,
+    what_about_meetings_in_live,
+    tell_us_your_opinion_about_us,
+  };
+
   const onSubmit = async () => {
     try {
       setError(false);
@@ -32,35 +74,7 @@ export const useTips = () => {
           Accept: 'application/json',
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          first_name: formCtx.formValues.first_name,
-          last_name: formCtx.formValues.last_name,
-          email: formCtx.formValues.email,
-          had_covid: formCtx.formValues.had_covid,
-          ...(formCtx.formValues.antibodies_test === 'no' && {
-            covid_sickness_date: formCtx.formValues.covid_sickness_date,
-          }),
-          had_antibody_test:
-            formCtx.formValues.antibodies_test === 'yes' ? true : false,
-          ...(formCtx.formValues.antibodies_test === 'yes' && {
-            antibodies: {
-              test_date: formCtx.formValues.antibodies_test_date,
-              number: +formCtx.formValues.antibodies_number,
-            },
-          }),
-          had_vaccine: formCtx.formValues.had_vaccine === 'yes' ? true : false,
-          vaccination_stage: formCtx.formValues.vaccination_stage,
-          ...(formCtx.formValues.had_vaccine === 'no' && {
-            i_am_waiting: formCtx.formValues.i_am_waiting,
-          }),
-          non_formal_meetings: formCtx.formValues.non_formal_meetings,
-          number_of_days_from_office:
-            +formCtx.formValues.number_of_days_from_office,
-          what_about_meetings_in_live:
-            formCtx.formValues.what_about_meetings_in_live,
-          tell_us_your_opinion_about_us:
-            formCtx.formValues.tell_us_your_opinion_about_us,
-        }),
+        body: JSON.stringify(toSendData),
       });
 
       if (response.status !== 201) {

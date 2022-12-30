@@ -90,7 +90,7 @@ const formReducer = (state, action) => {
   if (action.type === 'tell_us_your_opinion_about_us') {
     return { ...state, tell_us_your_opinion_about_us: action.value };
   }
-  return state;
+  return { ...state };
 };
 
 export const FormDataProvider = (props) => {
