@@ -13,6 +13,8 @@ The Covid Questionnaire is an application that new employees of RedBerry have to
 - [Prerequisites](#prerequisites)
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Resources Tab](#resources-tab)
 
 ### Prerequisites
 
@@ -24,7 +26,7 @@ The Covid Questionnaire is an application that new employees of RedBerry have to
 
 ### Tech Stack
 
-- [React @16.11.0](https://reactjs.org) - front-end framework
+- [React @18](https://reactjs.org) - front-end framework
 
 #
 
@@ -53,3 +55,42 @@ yarn
 ```sh
 npm start
 ```
+
+#
+
+### Project Structure
+
+src
+|-- App.js
+|-- assets
+|-- components
+| |-- component-folder
+| | |-- component-name.jsx
+| | |-- index.js
+| |-- index.js
+|-- context
+| |-- context-folder
+|-- helpers
+|-- pages
+| |-- page-folder
+| | |-- page-name.jsx
+| | |-- index.js
+| | |-- use-page-name.js
+| |-- index.js
+tailwind.config.js
+.eslintrc.json
+.gitignore
+.prettierrc.json
+.vscode
+|-- settings.json
+jsconfig.json
+package-lock.json
+package.json
+postcss.config.js
+
+#
+
+### Resources Tab
+
+- [Assignment link](https://redberry.gitbook.io/assignment-i-covid-questionaire/)
+- [Figma link](https://www.figma.com/file/56t2BI25FcD0LAIjR4GVkQ/%E1%83%99%E1%83%98%E1%83%97%E1%83%AE%E1%83%95%E1%83%90%E1%83%A0%E1%83%98?node-id=37%3A3) - Application Design
