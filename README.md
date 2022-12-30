@@ -88,6 +88,7 @@ npm start
 - package-lock.json
 - package.json
 - postcss.config.js
+```
 
 #
 
@@ -95,4 +96,7 @@ npm start
 
 - [Assignment link](https://redberry.gitbook.io/assignment-i-covid-questionaire/)
 - [Figma link](https://www.figma.com/file/56t2BI25FcD0LAIjR4GVkQ/%E1%83%99%E1%83%98%E1%83%97%E1%83%AE%E1%83%95%E1%83%90%E1%83%A0%E1%83%98?node-id=37%3A3) - Application Design
+
+```
+
 ```
