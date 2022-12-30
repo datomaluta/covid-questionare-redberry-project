@@ -95,7 +95,10 @@ const Vaccination = () => {
           />
         </div>
 
-        <Link className='absolute bottom-8 left-[47%] -translate-x-1/2'>
+        <Link
+          to='/covid-questions'
+          className='absolute bottom-8 left-[47%] -translate-x-1/2'
+        >
           <PrevArrow />
         </Link>
       </FormWrapper>

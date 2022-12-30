@@ -14,6 +14,8 @@ export const useInput = (props) => {
   useEffect(() => {
     if (inputData) {
       formCtx.dispatch({ type: props.name, value: inputData });
+    } else {
+      formCtx.dispatch({ type: props.name, value: '' });
     }
   }, [inputData, props.name]);
 

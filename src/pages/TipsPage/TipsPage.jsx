@@ -6,7 +6,8 @@ import { ErrorMessage } from '@hookform/error-message';
 import { Link } from 'react-router-dom';
 
 const TipsPage = () => {
-  const { form, onSubmit } = useTips();
+  const { form, onSubmit, error } = useTips();
+
   return (
     <FormProvider {...form}>
       <FormWrapper page='4'>
@@ -124,7 +125,8 @@ const TipsPage = () => {
               </p>
               <TextArea name='tell_us_your_opinion_about_us' />
             </div>
-            <div className='flex justify-end mt-14'>
+            <div className='flex items-center justify-end mt-14'>
+              {error && <p className='text-red-500'>დაფიქსირდა შეცდომა</p>}
               <button className='font-contractica px-7 py-4 bg-light-blue text-white rounded-[2.625rem]'>
                 დასრულება
               </button>
