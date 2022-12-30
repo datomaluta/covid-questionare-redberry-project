@@ -11,6 +11,9 @@ module.exports = {
         'light-blue': '#208298',
         'error-color': '#F15524',
       },
+      width: {
+        'vaccination-form-width': '40.125rem',
+      },
       fontFamily: {
         contractica: 'TBC-Contractica-Bold-caps',
         Anonymous: 'Anonymous Pro',
