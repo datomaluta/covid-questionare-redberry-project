@@ -26,9 +26,9 @@ The Covid Questionnaire is an application that new employees of RedBerry have to
 
 ### Tech Stack
 
-- <img src="readme/assets/react.png" height="18" style="position: relative; top: 4px" /> [React @18](https://reactjs.org) - front-end framework
-- <img src="readme/assets/tailwind.png"  height="20" style="position: relative; top: 4px" /> [Tailwind CSS](https://tailwindcss.com/)
-- <img src="readme/assets/react-hook-form.jpg" height="18" style="position: relative; top: 4px" /> [React Hook Form](https://react-hook-form.com/)
+- <img src="readme/assets/react.png" height="18" style="position: relative; top: 4px" /> [React @18.2.0](https://reactjs.org) - front-end framework
+- <img src="readme/assets/tailwind.png"  height="20" style="position: relative; top: 4px" /> [Tailwind CSS @3.2.4](https://tailwindcss.com/)
+- <img src="readme/assets/react-hook-form.jpg" height="18" style="position: relative; top: 4px" /> [React Hook Form @7.41.3](https://react-hook-form.com/)
 
 #
 
@@ -104,4 +104,4 @@ npm start
 - [Application Design Prototype](https://www.figma.com/proto/56t2BI25FcD0LAIjR4GVkQ/%E1%83%99%E1%83%98%E1%83%97%E1%83%AE%E1%83%95%E1%83%90%E1%83%A0%E1%83%98?node-id=37%3A3&starting-point-node-id=1%3A2&scaling=contain)
 - [Git commit rules](https://redberry.gitbook.io/resources/other/git-is-semantikuri-komitebi)
 - [Font [BGP Arial]](https://fonts.ge/ka/font/13/BPG-Arial)
-- [Assignment Link](https://redberry.gitbook.io/assignment-i-covid-questionaire/)
+- [Assignment Documentation](https://redberry.gitbook.io/assignment-i-covid-questionaire/)
