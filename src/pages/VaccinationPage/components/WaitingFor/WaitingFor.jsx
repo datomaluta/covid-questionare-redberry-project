@@ -3,7 +3,9 @@ import { RadioInput } from 'components';
 const WaitingFor = () => {
   return (
     <div className='mt-12'>
-      <p className='font-HelveticaNeueBold text-[1.375rem]'>რას ელოდები?*</p>
+      <p className='font-HelveticaNeueBold text-[1.375rem] text-light-black'>
+        რას ელოდები?*
+      </p>
       <RadioInput
         id='registered_and_waiting'
         value='registered_and_waiting'

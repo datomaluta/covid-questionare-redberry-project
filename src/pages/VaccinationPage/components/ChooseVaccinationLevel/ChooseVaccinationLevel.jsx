@@ -3,7 +3,7 @@ import { RadioInput } from 'components';
 const ChooseVaccinationLevel = () => {
   return (
     <div className='mt-12'>
-      <p className='font-HelveticaNeueBold text-[1.375rem]'>
+      <p className='font-HelveticaNeueBold text-[1.375rem] text-light-black'>
         აირჩიე რა ეტაპზე ხარ*
       </p>
       <RadioInput

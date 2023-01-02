@@ -6,7 +6,7 @@ const TextInput = (props) => {
 
   return (
     <div className='mb-12'>
-      <label className='font-HelveticaNeueBold text-[1.375rem] mb-2 block'>
+      <label className='font-HelveticaNeueBold text-[1.375rem] mb-2 block text-light-black'>
         {props.label}
       </label>
       <input
