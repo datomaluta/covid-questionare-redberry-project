@@ -20,7 +20,7 @@ const RadioInput = (props) => {
         <span className='w-[1.063rem] h-[1.063rem] inline-block rounded-full '></span>
       </label>
       <label
-        className='text-xl cursor-pointer font-HelveticaNeueThin flex items-center'
+        className='text-xl cursor-pointer font-HelveticaNeueThin flex items-center text-light-black'
         htmlFor={props.id}
       >
         {props.answer}

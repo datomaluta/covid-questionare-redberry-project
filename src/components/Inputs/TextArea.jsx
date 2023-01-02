@@ -6,7 +6,7 @@ const TextArea = (props) => {
   return (
     <textarea
       {...form.register(props.name)}
-      className='bg-transparent border border-light-black w-[38.875rem] h-[11.5rem] font-HelveticaNeueThin px-2 py-2'
+      className='bg-transparent border border-light-black w-[38.875rem] h-[11.5rem] font-HelveticaNeueThin px-2 py-2 resize-none'
     ></textarea>
   );
 };

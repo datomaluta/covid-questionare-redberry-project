@@ -11,22 +11,25 @@ const TipsPage = () => {
   return (
     <FormProvider {...form}>
       <FormWrapper page='4'>
-        <div className='w-[38.875rem] max-h-[50rem] mt-10 mr-36 overflow-y-scroll overflow-x-hidden scrollbar-none pb-16'>
+        <div className='w-[38.875rem] max-h-[53rem] pt-10 mr-36 overflow-y-scroll overflow-x-hidden scrollbar-none pb-8'>
           <div className='font-HelveticaNeueThin text-[1.375rem]'>
-            <p className='mb-4'>
+            <p className='mb-4 text-light-black'>
               რედბერის მთავარი ღირებულება ჩვენი გუნდის თითოეული წევრია. გარემო,
               რომელსაც ჩვენი თანამშრომლები ქმნით, ბევრისთვის არის და ყოფილა
               წლების განმავლობაში მიზნებისთვის ერთად ბრძოლის მიზეზი, ბევრისთვის
               კი — ჩვენთან გადმოსვლის.
             </p>
-            <p>
+            <p className='text-light-black'>
               პანდემიის პერიოდში ერთმანეთსაც იშვიათად ვნახულობთ პირისპირ და
               ყოველდღიური კომუნიკაციაც გაიშვიათდა.
             </p>
           </div>
-          <form onSubmit={form.handleSubmit(onSubmit)} className='mt-10'>
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className='mt-10 relative'
+          >
             <div>
-              <p className='font-HelveticaNeueBold text-[1.375rem]'>
+              <p className='font-HelveticaNeueBold text-[1.375rem] text-light-black'>
                 რა სიხშირით შეიძლება გვქონდეს საერთო არაფორმალური ონლაინ
                 შეხვედრები, სადაც ყველა სურვილისამებრ ჩაერთვება?*
               </p>
@@ -63,7 +66,7 @@ const TipsPage = () => {
               </p>
             </div>
             <div className='mt-10'>
-              <p className='font-HelveticaNeueBold text-[1.375rem]'>
+              <p className='font-HelveticaNeueBold text-[1.375rem] text-light-black'>
                 კვირაში რამდენი დღე ისურვებდი ოფისიდან მუშაობას?*
               </p>
               <RadioInput
@@ -112,14 +115,14 @@ const TipsPage = () => {
             </div>
 
             <div className='mt-10'>
-              <p className='font-HelveticaNeueBold text-[1.375rem] mb-5'>
+              <p className='font-HelveticaNeueBold text-[1.375rem] mb-5 text-light-black'>
                 რას ფიქრობ ფიზიკურ შეკრებებზე?
               </p>
               <TextArea name='what_about_meetings_in_live' />
             </div>
 
             <div className='mt-10'>
-              <p className='font-HelveticaNeueBold text-[1.375rem] mb-5'>
+              <p className='font-HelveticaNeueBold text-[1.375rem] mb-5 text-light-black'>
                 რას ფიქრობ არსებულ გარემოზე: <br /> რა მოგწონს, რას დაამატებდი,
                 რას შეცვლიდი?
               </p>
@@ -130,6 +133,11 @@ const TipsPage = () => {
               <button className='font-contractica px-7 py-4 bg-light-blue text-white rounded-[2.625rem]'>
                 დასრულება
               </button>
+            </div>
+            <div className='flex justify-end mt-16'>
+              <Link to='/vaccination'>
+                <PrevArrow />
+              </Link>
             </div>
           </form>
         </div>
@@ -145,12 +153,6 @@ const TipsPage = () => {
             className='absolute animate-heartAnimation z-10'
           />
         </div>
-        <Link
-          to='/vaccination'
-          className='absolute bottom-6 left-[45%] -translate-x-1/2'
-        >
-          <PrevArrow />
-        </Link>
       </FormWrapper>
     </FormProvider>
   );

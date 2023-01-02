@@ -4,7 +4,9 @@ const StartingPage = () => {
   return (
     <StartingWrapper>
       <Logo />
-      <StartLink />
+      <div className='overflow-hidden'>
+        <StartLink />
+      </div>
     </StartingWrapper>
   );
 };

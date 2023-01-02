@@ -23,7 +23,7 @@ const CovidQuestions = () => {
           className='mt-10 w-[37.25rem]'
         >
           <div>
-            <p className='font-HelveticaNeueBold text-[1.375rem]'>
+            <p className='font-HelveticaNeueBold text-[1.375rem] text-light-black'>
               გაქვს გადატანილი Covid-19?*
             </p>
             <RadioInput
@@ -52,7 +52,7 @@ const CovidQuestions = () => {
 
           {formCtx.formValues.had_covid === 'yes' && (
             <div className='mt-12'>
-              <p className='font-HelveticaNeueBold text-[1.375rem]'>
+              <p className='font-HelveticaNeueBold text-[1.375rem] text-light-black'>
                 ანტისხეულების ტესტი გაქვს გაკეთებული?*
               </p>
               <RadioInput
@@ -80,9 +80,9 @@ const CovidQuestions = () => {
           {formCtx.formValues.antibodies_test === 'yes' &&
             formCtx.formValues.had_covid === 'yes' && (
               <div className='mt-12'>
-                <p className='font-HelveticaNeueBold text-[1.375rem]'>
+                <p className='font-HelveticaNeueBold text-[1.375rem] text-light-black'>
                   თუ გახსოვს, გთხოვ მიუთითე ტესტის მიახლოებითი <br /> რიცხვი და
-                  ანტისხეულების რაოდენობა*
+                  ანტისხეულების რაოდენობა
                 </p>
                 <div className='mt-8 ml-4'>
                   <DateInput name='antibodies_test_date' placeholder='რიცხვი' />
@@ -102,7 +102,7 @@ const CovidQuestions = () => {
           {formCtx.formValues.antibodies_test === 'no' &&
             formCtx.formValues.had_covid === 'yes' && (
               <div className='mt-12'>
-                <p className='font-HelveticaNeueBold text-[1.375rem]'>
+                <p className='font-HelveticaNeueBold text-[1.375rem] text-light-black'>
                   მიუთითე მიახლოებითი პერიოდი (დღე/თვე/წელი) როდის გქონდა
                   Covid-19*
                 </p>

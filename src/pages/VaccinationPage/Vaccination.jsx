@@ -23,7 +23,7 @@ const Vaccination = () => {
           className='mt-10 w-vaccination-form-width'
         >
           <div>
-            <p className='font-HelveticaNeueBold text-[1.375rem]'>
+            <p className='font-HelveticaNeueBold text-[1.375rem] text-light-black'>
               უკვე აცრილი ხარ?*
             </p>
             <RadioInput
