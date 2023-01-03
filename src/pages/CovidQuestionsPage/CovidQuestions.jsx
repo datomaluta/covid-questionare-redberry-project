@@ -15,6 +15,8 @@ import { useCovidQuestionsForm } from './useCovidQuestionsForm';
 const CovidQuestions = () => {
   const { form, onSubmit, formCtx } = useCovidQuestionsForm();
 
+  console.log(formCtx.formValues);
+
   return (
     <FormProvider {...form}>
       <FormWrapper page='2'>

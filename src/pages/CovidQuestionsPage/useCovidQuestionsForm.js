@@ -6,6 +6,7 @@ import { FormContext } from 'context';
 export const useCovidQuestionsForm = () => {
   const navigate = useNavigate();
   const formCtx = useContext(FormContext);
+
   const form = useForm({
     mode: 'onChange',
     defaultValues: {
