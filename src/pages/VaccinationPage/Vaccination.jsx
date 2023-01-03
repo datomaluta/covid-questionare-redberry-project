@@ -66,7 +66,7 @@ const Vaccination = () => {
               <p className='font-HelveticaNeueThin text-error-color mt-4 ml-4 h-1'>
                 <ErrorMessage
                   errors={form.formState.errors}
-                  name={'vaccination_stage'}
+                  name={'i_am_waiting'}
                 />
               </p>
               {formCtx.formValues.i_am_waiting === 'not_planning' && (
