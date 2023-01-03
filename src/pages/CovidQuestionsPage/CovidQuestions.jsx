@@ -91,8 +91,8 @@ const CovidQuestions = () => {
                     placeholder='ანტისხეულების რაოდენობა'
                     rules={{
                       pattern: {
-                        value: /^[0-9]*$/,
-                        message: 'დასაშვებია მხოლოდ ციფრები',
+                        value: /^[1-9]*$/,
+                        message: 'შეიყვანეთ ვალიდური მნიშვნელობა',
                       },
                     }}
                   />
@@ -121,7 +121,10 @@ const CovidQuestions = () => {
             disabled={!form.formState.isValid}
             className='absolute bottom-8 left-[53%] z-40 -translate-x-1/2'
           >
-            <NextArrow />
+            <NextArrow
+              color={form.formState.isValid ? '#232323' : '#8D8D8D'}
+              cursor={form.formState.isValid ? 'pointer' : 'auto'}
+            />
           </button>
         </form>
         <div className='relative flex-grow'>

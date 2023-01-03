@@ -16,6 +16,10 @@ const IdentificationPage = () => {
             name={'first_name'}
             rules={{
               required: 'სახელის ველი უნდა შედგებოდეს მინიმუმ 3 სიმბოლოსგან',
+              pattern: {
+                value: /^[A-Za-zა-ჰ]+$/,
+                message: 'სახელის ველი უნდა შეიცავდეს მხოლოდ ანბანის ასოებს',
+              },
               minLength: {
                 value: 3,
                 message: 'სახელის ველი უნდა შედგებოდეს მინიმუმ 3 სიმბოლოსგან',
@@ -24,10 +28,6 @@ const IdentificationPage = () => {
                 value: 255,
                 message:
                   'სახელის ველი უნდა შედგებოდეს მაქსიმუმ 255 სიმბოლოსგან',
-              },
-              pattern: {
-                value: /[a-zA-Zა-ჰ]+/,
-                message: 'სახელის ველი უნდა შეიცავდეს მხოლოდ ანბანის ასოებს',
               },
             }}
           />
@@ -46,7 +46,7 @@ const IdentificationPage = () => {
                 message: 'გვარის ველი უნდა შედგებოდეს მაქსიმუმ 255 სიმბოლოსგან',
               },
               pattern: {
-                value: /[a-zA-Zა-ჰ]+/,
+                value: /^[A-Za-zა-ჰ]+$/,
                 message: 'გვარის ველი უნდა შეიცავდეს მხოლოდ ანბანის ასოებს',
               },
             }}
@@ -68,11 +68,11 @@ const IdentificationPage = () => {
             <span className='h-[0.05rem] mb-5 w-60 bg-black block'></span>
             *-ით მონიშნული ველების შევსება <br /> სავალდებულოა
           </p>
-          <button
-            disabled={!form.formState.isValid}
-            className='absolute z-40 bottom-8 left-[53%] -translate-x-1/2'
-          >
-            <NextArrow />
+          <button className='absolute z-40 bottom-8 left-[53%] -translate-x-1/2'>
+            <NextArrow
+              color={form.formState.isValid ? '#232323' : '#8D8D8D'}
+              cursor={form.formState.isValid ? 'pointer' : 'auto'}
+            />
           </button>
         </form>
         <div className='relative w-full'>

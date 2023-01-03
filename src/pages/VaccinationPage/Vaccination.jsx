@@ -82,7 +82,10 @@ const Vaccination = () => {
             disabled={!form.formState.isValid}
             className='absolute bottom-8 left-[53%] -translate-x-1/2 flex gap-28'
           >
-            <NextArrow />
+            <NextArrow
+              color={form.formState.isValid ? '#232323' : '#8D8D8D'}
+              cursor={form.formState.isValid ? 'pointer' : 'auto'}
+            />
           </button>
         </form>
         <div className='mt-12 ml-16 relative flex-grow'>

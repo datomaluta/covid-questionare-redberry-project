@@ -10,6 +10,7 @@ module.exports = {
         'link-color': '#1289AE',
         'light-blue': '#208298',
         'error-color': '#F15524',
+        'disabled-btn': '#8D8D8D',
       },
       width: {
         'vaccination-form-width': '40.125rem',
