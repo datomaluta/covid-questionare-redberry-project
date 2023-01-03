@@ -14,6 +14,7 @@ const TextInput = (props) => {
 
   const { ref, ...rest } = form.register(props.name, {
     onBlur: (e) => (inputRef.current.type = 'text'),
+    ...props.rules,
   });
 
   return (

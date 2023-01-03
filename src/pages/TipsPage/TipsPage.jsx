@@ -11,8 +11,8 @@ const TipsPage = () => {
   return (
     <FormProvider {...form}>
       <FormWrapper page='4'>
-        <div className='w-[38.875rem] max-h-[53rem] pt-10 mr-36 overflow-y-scroll overflow-x-hidden scrollbar-none pb-8'>
-          <div className='font-HelveticaNeueThin text-[1.375rem]'>
+        <div className='w-[47.875rem] max-h-[53rem] pt-10 mr-36 overflow-y-scroll overflow-x-hidden scrollbar-none pb-8'>
+          <div className='font-HelveticaNeueThin text-[1.375rem] w-[38.875rem]'>
             <p className='mb-4 text-light-black'>
               რედბერის მთავარი ღირებულება ჩვენი გუნდის თითოეული წევრია. გარემო,
               რომელსაც ჩვენი თანამშრომლები ქმნით, ბევრისთვის არის და ყოფილა
@@ -26,7 +26,7 @@ const TipsPage = () => {
           </div>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className='mt-10 relative'
+            className='mt-10 relative w-[38.875rem]'
           >
             <div>
               <p className='font-HelveticaNeueBold text-[1.375rem] text-light-black'>
@@ -134,12 +134,12 @@ const TipsPage = () => {
                 დასრულება
               </button>
             </div>
-            <div className='flex justify-end mt-16'>
-              <Link to='/vaccination'>
-                <PrevArrow />
-              </Link>
-            </div>
           </form>
+          <div className='flex justify-end mt-16 w-full'>
+            <Link to='/vaccination'>
+              <PrevArrow />
+            </Link>
+          </div>
         </div>
         <div className='relative w-[43.938rem] h-[43.938rem] mt-16'>
           <img
