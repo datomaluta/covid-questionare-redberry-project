@@ -27,8 +27,8 @@ The Covid Questionnaire is an application that new employees of RedBerry have to
 ### Tech Stack
 
 - <img src="readme/assets/react.png" height="18" style="position: relative; top: 4px" /> [React @18.2.0](https://reactjs.org) - front-end framework
-- <img src="readme/assets/tailwind.png"  height="20" style="position: relative; top: 4px" /> [Tailwind CSS @3.2.4](https://tailwindcss.com/)
-- <img src="readme/assets/react-hook-form.jpg" height="18" style="position: relative; top: 4px" /> [React Hook Form @7.41.3](https://react-hook-form.com/)
+- <img src="readme/assets/tailwind.png"  height="20" style="position: relative; top: 4px" /> [Tailwind CSS @3.2.4](https://tailwindcss.com/) - CSS framework
+- <img src="readme/assets/react-hook-form.jpg" height="18" style="position: relative; top: 4px" /> [React Hook Form @7.41.3](https://react-hook-form.com/) - library for form validation
 
 #
 
