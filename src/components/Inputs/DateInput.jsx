@@ -8,8 +8,6 @@ const TextInput = (props) => {
   const inputRef = useRef();
   const currentDate = getCurrentDate();
 
-  console.log(props.rules);
-
   const focusHandler = () => {
     inputRef.current.type = 'date';
   };
