@@ -17,7 +17,7 @@ export const useInput = (props) => {
     } else {
       formCtx.dispatch({ type: props.name, value: '' });
     }
-  }, [inputData, props.name]);
+  }, [inputData, props.name, formCtx]);
 
   return { form };
 };
