@@ -17,7 +17,8 @@ export const useInput = (props) => {
     } else {
       formCtx.dispatch({ type: props.name, value: '' });
     }
-  }, [inputData, props.name, formCtx]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return { form };
 };
